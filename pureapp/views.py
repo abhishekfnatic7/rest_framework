@@ -10,7 +10,7 @@ def home(request):
     odata=Pure.objects.all()
     serail=Student(odata,many=True)
 
-    return JsonResponse({'status':200,'payload':serail.data})
+    return Response({'status':200,'payload':serail.data})
     
 @api_view(['POST'])
 def homes(request):
